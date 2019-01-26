@@ -2,6 +2,14 @@ package DP;
 
 /**
  * Created by apple on 18/2/24.
+ * 来源：http://blog.csdn.net/weixin_40564421/article/details/78988078
+ * 有一个n层的建筑。如果一个鸡蛋从第k层及以上落下，它会碎掉。如果从低于这一层的任意层落下，都不会碎。
+ 有m个鸡蛋，用最坏的情况下实验次数最少的方法去找到k, 返回最坏情况下所需的实验次数。
+ 样例
+ 给出 m = 2, n = 100 返回 14
+ 给出 m = 2, n = 36 返回 8
+ *
+ *
  */
 public class EggDropPuzzle {
     public static void main(String args[]){
