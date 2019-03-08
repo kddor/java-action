@@ -6,6 +6,7 @@ package AlgBeauty.Chapter11;
 
 import java.util.*;
 public class ArraySort {
+
     //冒泡排序
     public void bubbleSort(int[]a){
         int n =  a.length;
@@ -25,7 +26,11 @@ public class ArraySort {
         }
     }
 
-    //插入排序
+    /**
+     * 插入排序
+     * 每一步将一个待排序的记录，按其关键码值的大小插入前面已经排序的文件中适当位置，直到全部插入完为止
+     * @param a
+     */
     public void insertionSort(int[]a){
         int n = a.length;
         if(n <=1) return;
@@ -48,7 +53,12 @@ public class ArraySort {
         }
     }
 
-    //选择排序
+    /**
+     * 选择排序：每一趟从待排序的记录中选取最小的元素，顺序放在已排序的序列最后，直到全部记录排序完毕
+     * 给定数组a,第1趟排序，在待排序数据a[1]~a[n]中选取最小的数据，将它与a[1]交换，第2趟，在待排序数据
+     * a[2]~a[n]中选择最小的数据，将它与a[2]交换....直到全部排序完成
+     * @param a
+     */
     public void selectSort(int[] a){
        for(int i = 0;i<a.length-1;i++){
            int k = i;
