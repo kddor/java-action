@@ -22,5 +22,10 @@ public class ListNode {
             current = current.next;
         }
         System.out.println("");
+
+
+
+
     }
+
 }

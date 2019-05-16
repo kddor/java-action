@@ -60,6 +60,8 @@ public class LinkListCode {
 
         ListNode.print(P1);
         System.out.println(getLength(P1));
+        System.out.print("");
+        System.out.println(findLastKNode(P1,2).val);
     }
 
 }
