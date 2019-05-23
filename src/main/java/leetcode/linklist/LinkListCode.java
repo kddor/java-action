@@ -1,4 +1,4 @@
-package AlgBeauty.LinkList;
+package leetcode.linklist;
 
 /**
  * Created by apple on 19/4/28.
@@ -7,6 +7,9 @@ package AlgBeauty.LinkList;
  */
 
 public class LinkListCode {
+
+
+
     /**
      * s1.获取单链表的长度
      * @param head
@@ -20,10 +23,13 @@ public class LinkListCode {
         ListNode current = head;
         while (current != null) {
             length++;
-            current = current.next;
+            current = current.getNext(); //获取下一个节点
         }
         return length;
     }
+
+
+
 
     /**
      * s2.查找单链表的倒数第K个节点
@@ -39,12 +45,12 @@ public class LinkListCode {
         ListNode second = head;
         //让second先移动k个位置
         for(int i=0;i<k;i++){
-            second=second.next;
+            second=second.getNext();
         }
         //让first和second结点整体向后移动，直到second结点为Null
-        while (second.next != null){
-            first= first.next;
-            second =second.next;
+        while (second.getNext() != null){
+            first= first.getNext();
+            second =second.getNext();
         }
         //当second结点为空的时候，此时first指向的结点就是我们要找的结点
         return first;
@@ -54,14 +60,14 @@ public class LinkListCode {
         ListNode P1 = new ListNode(1);
         ListNode P2 = new ListNode(6);
         ListNode P3 = new ListNode(3 );
-        P1.next = P2;
-        P2.next = P3;
-        P3.next = null;
+        P1.setVal(5);
+        P1.setNext(P2);
+        P2.setNext(P3);
 
         ListNode.print(P1);
         System.out.println(getLength(P1));
         System.out.print("");
-        System.out.println(findLastKNode(P1,2).val);
+        System.out.println(findLastKNode(P1,2).getVal());
     }
 
 }
