@@ -7,9 +7,6 @@ package leetcode.linklist;
  */
 
 public class LinkListCode {
-
-
-
     /**
      * s1.获取单链表的长度
      * @param head

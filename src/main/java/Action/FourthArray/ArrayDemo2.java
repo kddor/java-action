@@ -3,6 +3,7 @@ package Action.FourthArray;
 /**
  * Created by apple on 19/1/26.
  */
+
 public class ArrayDemo2 {
     public static void main(String[] args) {
         int score[] = null;
@@ -32,19 +33,14 @@ public class ArrayDemo2 {
             }
             System.out.println("");
         }
-
-
     }
 
     //可变参数
-
     public static void fun(int... arg) {
         for (int i = 0; i < arg.length; i++) {
             System.out.println(arg[i] + "、");
         }
     }
-
-
 }
 
 
