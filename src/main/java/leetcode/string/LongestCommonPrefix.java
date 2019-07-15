@@ -26,9 +26,6 @@ public class LongestCommonPrefix {
         res=lst.longestCommonPrefix(str);
         System.out.println(res);
 
-
-
-
     }
 
     public String longestCommonPrefix(String[] strs) {
