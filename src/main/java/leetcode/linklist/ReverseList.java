@@ -6,14 +6,15 @@ package leetcode.linklist;
  示例:
  输入: 1->2->3->4->5->NULL
  输出: 5->4->3->2->1->NULL
-
  需要定义3个指针分别指向遍历到的节点、它的前一个节点及后一个节点
-
  */
 public class ReverseList {
-
+    /**
+     * 反转链表
+     * @param head
+     * @return
+     */
     public ListNode reverseList(ListNode head) {
-
         ListNode prev = null;
         ListNode curr = head;
         while (curr != null) {
@@ -23,6 +24,15 @@ public class ReverseList {
             curr = nextTemp;
         }
         return prev;
+    }
+
+    /**
+     * 删除节点
+     * @param node
+     */
+    public void deleteNode(ListNode node) {
+        node.setVal(node.getNext().getVal());   //设置节点的值为下一节点的val
+        node.setNext(node.getNext().getNext()); //指针指向下一节点
     }
 
     public static void main(String args[]) {
@@ -39,11 +49,13 @@ public class ReverseList {
         ListNode.print(P1);
 
         ReverseList revlist = new ReverseList();
+        //反转链表
         ListNode prev=revlist.reverseList(P1);
         ListNode.print(prev);
-
-
-
+        //删除节点2
+        revlist.deleteNode(P2);
+        ListNode.print(prev);
+        System.out.print(revlist.getClass().getName());
     }
 
 
